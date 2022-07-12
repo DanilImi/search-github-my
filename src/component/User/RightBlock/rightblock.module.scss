@@ -1,0 +1,59 @@
+.rightblock {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.rightHeadReposit {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 130%;
+	color: #000;
+	margin-bottom: 29px;
+}
+
+.pages {
+	margin: 20px 0;
+
+	.page,
+	.currentpage {
+		border: 1px solid lightgray;
+		border-radius: 100%;
+		padding: 5px 10px;
+		margin: 0 10px;
+		cursor: pointer;
+	}
+
+	.currentpage {
+		border: 2px solid gray;
+		font-weight: 700;
+	}
+}
+
+
+.fetching {
+	margin: 0 auto;
+	margin-top: 260px;
+	margin-bottom: 184px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	border: 2px dashed red;
+	animation-name: search-fetching;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+@keyframes search-fetching {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg) scale(1.3);
+	}
+}

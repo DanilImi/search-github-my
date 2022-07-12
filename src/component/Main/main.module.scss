@@ -1,0 +1,10 @@
+.main{
+	@apply flex flex-col justify-between items-center mb-64;
+}
+
+
+@media (min-width: 360px) and (max-width: 414px){
+	.main{
+		margin-top: 220px;
+	}
+}

@@ -1,0 +1,93 @@
+.header {
+	@apply h-h-header bg-fon-Header flex items-center;
+}
+
+.parentHeaderInput {
+	@apply ml-5 flex;
+}
+
+.headerinput {
+	@apply h-10 bg-searchIcon bg-no-repeat bg-bgpositionsearchInput w-w-input px-11 rounded-md;
+}
+
+.headerButton {
+	margin-left: 20px;
+	display: inline-block;
+	padding: 0 10px;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+}
+
+.headerButton:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+
+.headerButton:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+.headerButton:active {
+	background-color: #808080;
+}
+
+
+
+@media (min-width: 360px) and (max-width: 414px) {
+	.headerinput {
+		width: 100px;
+		padding-right: 0;
+		padding-left: 23px;
+		height: 30px;
+	}
+
+	.headerButton {
+		padding: 0 5px;
+	}
+}
+
+@media (min-width: 414px) and (max-width: 768px) {
+	.headerinput {
+		width: 150px;
+		padding-right: 0;
+		padding-left: 23px;
+		height: 40px;
+	}
+
+	.headerButton {
+		padding: 0 5px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.headerinput {
+		width: 350px;
+		padding-right: 0;
+	}
+
+	.headerButton {
+		padding: 0 5px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.headerinput {
+		width: 450px;
+	}
+}

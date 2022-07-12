@@ -1,0 +1,22 @@
+.user {
+	@apply flex justify-between px-14;
+}
+
+.user {
+	margin-top: 24px;
+}
+
+
+@media (min-width: 360px) and (max-width: 1200px) {
+	.user {
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+}
+
+@media (min-width: 360px) and (max-width: 414px) {
+
+	.user {
+		height: 100%;
+	}
+}
