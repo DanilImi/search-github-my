@@ -4,6 +4,7 @@ const SET_IS_FETCHING_REPOS = 'SET_IS_FETCHING_REPOS'
 const SET_IS_REPOS_ALL = 'SET_IS_REPOS_ALL'
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 const SET_IS_FETCHING_REPOS_ALL = 'SET_IS_FETCHING_REPOS_ALL'
+const SET_REPOS_Name = 'SET_REPOS_Name'
 
 const defaultState = {
 	items: [],
@@ -14,8 +15,8 @@ const defaultState = {
 	currentPage: 1,
 	perPage: 4,
 	totalCount: 0,
+	reposName: ''
 }
-
 
 export default function reposReducer(state = defaultState, action) {
 	switch (action.type) {
@@ -55,6 +56,11 @@ export default function reposReducer(state = defaultState, action) {
 				...state,
 				isFetchingRepos: action.payload,
 			}
+		case SET_REPOS_Name:
+			return {
+				...state,
+				reposName: action.payload,
+			}
 		default:
 			return state
 	}
@@ -66,6 +72,9 @@ export const setIsFetchingRepos = (int) => ({ type: SET_IS_FETCHING_REPOS, paylo
 export const setReposAll = (reposAll) => ({ type: SET_IS_REPOS_ALL, payload: reposAll })
 export const setCurrentPage = (page) => ({ type: SET_CURRENT_PAGE, payload: page })
 export const setIsFetchingReposAll = (boolFetching) => ({ type: SET_IS_FETCHING_REPOS_ALL, payload: boolFetching })
+export const setReposName = (reposName) => ({ type: SET_REPOS_Name, payload: reposName })
+
+
 
 
 

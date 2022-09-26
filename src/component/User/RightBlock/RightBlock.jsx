@@ -1,24 +1,23 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentPage } from '../../../redusers/reposReducer'
 import { createPages } from '../../../utils/pagesCreator'
 import Reposit from './Reposit/Reposit'
 import styles from './rightblock.module.scss'
 
 
-function RightBlock(props) {
-	let rightProps = props.repo
+function RightBlock() {
+	const { currentPage, perPage, totalCount, isFetchingRepos, reposAll } = useSelector((state) => state.repos)
 	const dispatch = useDispatch()
-	const pagesCount = Math.ceil(props.totalCount / props.perPage)
+	const pagesCount = Math.ceil(totalCount / perPage)
 	const pages = []
-	createPages(pages, pagesCount, props.currentPage)
+	createPages(pages, pagesCount, currentPage)
 	return (
 		<div className={styles.rightblock}>
-			<div className={styles.rightHeadReposit}>Repositories({props.totalCount})</div>
+			<div className={styles.rightHeadReposit}>Repositories({totalCount})</div>
 			{
-				props.isFetchingRepos === false
+				isFetchingRepos === false
 					?
-					rightProps.map((index) => {
+					reposAll.map((index) => {
 						return <Reposit key={index.id} repo={index} />
 					})
 					:
@@ -27,7 +26,7 @@ function RightBlock(props) {
 
 			<div className={styles.pages}>
 				{pages.map((page, index) => <span key={index}
-					className={props.currentPage === page ? styles.currentpage : styles.page}
+					className={currentPage === page ? styles.currentpage : styles.page}
 					onClick={() => dispatch(setCurrentPage(page))}>{page}</span>)}
 			</div>
 

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { setIsFetching, setIsFetchingRepos, setIsFetchingReposAll, setRepos, setReposAll } from '../../redusers/reposReducer'
+import { setIsFetching, setIsFetchingRepos, setIsFetchingReposAll, setRepos, setReposAll, setReposName } from '../../redusers/reposReducer'
 
 
 export const getRepos = (props, currentPage, perPage) => {
@@ -13,6 +13,7 @@ export const getRepos = (props, currentPage, perPage) => {
 				axios.get(`https://api.github.com/users/${props}`),
 				axios.get(`https://api.github.com/users/${props}/repos?per_page=${perPage}&page=${currentPage}`)
 			])
+			dispatch(setReposName(props))
 			dispatch(setRepos(response.data))
 			dispatch(setReposAll(secondResponse.data))
 		} catch (error) {

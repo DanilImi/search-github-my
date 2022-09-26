@@ -1,13 +1,13 @@
-import React from 'react'
-import styles from './main.module.scss'
-import MainIcon from './MainIcon/MainIcon'
-import MainText from './MainText/MainText'
+import Layout from '../common/Layout'
+import styles from './Main.module.scss'
+import iconMain from './../../images/images.png'
 
-function Main() {
+const Main = () => {
   return (
 	 <div className={styles.main}>
-		<MainIcon />
-		<MainText />
+		<Layout />
+		<img className={styles.mainIcon} src={iconMain} alt="" />
+		<div className={styles.mainText}>Start with searching a GitHub user</div>
 	 </div>
   )
 }

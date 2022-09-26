@@ -1,21 +1,20 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
 import { getRepos, newGetReposALL } from './../action/repos';
-import { useEffect } from 'react';
 
 import styles from './header.module.scss';
-import HeaderIcon from './HeaderIcon/HeaderIcon';
 import { setCurrentPage } from '../../redusers/reposReducer';
 
 
 
-function Header(header) {
+const Header = (header) => {
 	const dispatch = useDispatch()
 	const [searchValue, setSearchValue] = useState("")
+	const valueName = useSelector((state) => state.repos.reposName)
 	
+
 	useEffect(() => {
-		dispatch(newGetReposALL(searchValue, header.headerCurrentPage, header.headerPerPage))
+		dispatch(newGetReposALL(valueName, header.headerCurrentPage, header.headerPerPage))
 	}, [header.headerCurrentPage])
 
 	function searchHandle() {
@@ -26,7 +25,6 @@ function Header(header) {
 
 	return (
 		<div className={styles.header}>
-			<HeaderIcon />
 			<div className={styles.parentHeaderInput}>
 				<input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className={styles.headerinput} />
 			</div>

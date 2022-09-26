@@ -1,13 +1,22 @@
+
 .header {
-	@apply h-h-header bg-fon-Header flex items-center;
+	display: flex;
+	align-items: center;
 }
 
+
 .parentHeaderInput {
-	@apply ml-5 flex;
+	margin-left: 5px;
 }
 
 .headerinput {
-	@apply h-10 bg-searchIcon bg-no-repeat bg-bgpositionsearchInput w-w-input px-11 rounded-md;
+	height: 40px;
+	background-image: url('../../images/image.png');
+	background-repeat: no-repeat;
+	background-position: bottom 50% right 96.2%;
+	width: 500px;
+	padding: 0 44px 0 44px;
+	border-radius: 6px;
 }
 
 .headerButton {

@@ -1,33 +1,43 @@
 .leftblock{
-	@apply flex flex-col mb-56;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 224px;
 }
 
 .leftimg{
-	@apply rounded-full w-72 h-72 mb-7;
+	border-radius: 100%;
+	width: 288px;
+	height: 288px;
+	margin-bottom: 28px;
 }
 
 .leftname{
-	@apply text-3xl font-semibold leading-8 mb-3;
+	margin-bottom: 12px;
+	line-height: 32px;
+	font-size: 30px;
+	font-family: sans-serif;
 }
 
 .leftnik{
-	@apply mb-6 cursor-pointer;
+	margin-bottom: 24px;
+	cursor: pointer;
 }
 
 .leftcontainer{
-	@apply flex;
+	display: flex;
 }
 
 .leftfollowers{
-	@apply flex mr-5;
+	display: flex;
+	margin-right: 20px; 
 }
 
 .leftfollowing{
-	@apply flex;
+	display: flex;
 }
 
 .leftinnerfollowers{
-	@apply mr-2;
+	margin-right: 8px;
 }
 
 .leftLogin{

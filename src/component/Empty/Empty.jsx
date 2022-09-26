@@ -1,13 +1,13 @@
-import React from 'react'
-import styles from './empty.module.scss'
-import EmptyIcon from './EmptyIcon/EmptyIcon'
-import EmptyText from './EmptyText/EmptyText'
+import Layout from '../common/Layout'
+import styles from './Empty.module.scss'
+import emptyIcon from '../../images/user.png'
 
-function Empty() {
+const Empty = () => {
   return (
 	 <div className={styles.empty}>
-		<EmptyIcon />
-		<EmptyText />
+		<Layout />
+		<img className={styles.emptyIcon} src={emptyIcon} alt="" />
+		<div className={styles.emptyText}>User not found</div>
 	 </div>
   )
 }

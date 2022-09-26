@@ -1,9 +1,10 @@
-.newBody {
-	@apply w-max h-max2 m-center bg-fon box-border flex flex-col justify-between;
-}
+
 
 .newBody {
-	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #F9F9F9;
 }
 
 .fetching {

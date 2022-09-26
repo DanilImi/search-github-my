@@ -1,17 +1,16 @@
-import React from 'react'
+import Layout from '../common/Layout'
 import LeftBlock from './LeftBlock/LeftBlock'
 import RightBlock from './RightBlock/RightBlock'
 import styles from './user.module.scss'
 
-function User(props) {
+const User = () => {
 	return (
 		<div className={styles.user}>
-			<LeftBlock repo={props.repo} />
-			<RightBlock repo={props.reposAll}
-				totalCount={props.totalCount}
-				currentPage={props.currentPage}
-				perPage={props.perPage}
-				isFetchingRepos={props.isFetchingRepos} />
+			<Layout />
+			<div className={styles.user_wrapper}>
+				<LeftBlock />
+				<RightBlock />
+			</div>
 		</div>
 	)
 }

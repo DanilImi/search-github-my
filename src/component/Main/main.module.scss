@@ -1,7 +1,25 @@
-.main{
-	@apply flex flex-col justify-between items-center mb-64;
-}
 
+.main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 256px;
+
+	> img{
+		margin-bottom: 44px;
+	}
+}
+.mainText{
+	width: 208px;
+	color: #808080;
+	font-size: 22px;
+	text-align: center;
+	line-height: 28px;
+}
+.mainIcon{
+	margin-top: 184px;
+}
 
 @media (min-width: 360px) and (max-width: 414px){
 	.main{
