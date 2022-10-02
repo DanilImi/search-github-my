@@ -1,5 +1,11 @@
 import axios from 'axios'
-import { setIsFetching, setIsFetchingRepos, setIsFetchingReposAll, setRepos, setReposAll, setReposName } from '../../redusers/reposReducer'
+import { setIsFetching, 
+	setIsFetchingRepos, 
+	setIsFetchingReposAll, 
+	setRepos, 
+	setReposAll, 
+	setReposName 
+} from '../../redusers/reposReducer'
 
 
 export const getRepos = (props, currentPage, perPage) => {
