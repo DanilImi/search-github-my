@@ -1,28 +1,6 @@
-
-
-.user {
-	display: flex;
-	flex-direction: column;
-
-}
-.user_wrapper{
+.user{
 	display: flex;
 	justify-content: space-between;
-	padding: 0 56px 0;
-	margin-top: 24px;
-}
-
-
-@media (min-width: 360px) and (max-width: 1200px) {
-	.user {
-		flex-wrap: wrap;
-		margin-top: 20px;
-	}
-}
-
-@media (min-width: 360px) and (max-width: 414px) {
-
-	.user {
-		height: 100%;
-	}
+	flex-wrap: wrap;
+	margin: 100px 15px 0 15px;
 }

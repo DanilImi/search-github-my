@@ -6,8 +6,17 @@ function Reposit({repo}) {
 	let descriptionReposit = newrepositProps.description
   return (
 	 <div className={styles.reposit}>
-		<a className={styles.innerreposit} href={newrepositProps.html_url} target={"_blank"} rel="noopener noreferrer">{nameReposit}</a>
-		<div className={styles.innerrepositopisanie}>{descriptionReposit === null ? 'not description' : descriptionReposit}</div>
+		<a 
+			className={styles.innerreposit} 
+			href={newrepositProps.html_url} 
+			target={"_blank"} 
+			rel="noopener noreferrer"
+		>
+			{nameReposit}
+		</a>
+		<div className={styles.description}>
+			{descriptionReposit === null ? 'not description' : descriptionReposit}
+		</div>
 	 </div>
   )
 }

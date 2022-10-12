@@ -18,18 +18,16 @@ function LeftBlock() {
 			</div>
 			<div className={styles.leftcontainer}>
 				<div className={styles.leftfollowers}>
-					<div className={styles.leftinnerfollowers}>
+					<div className={styles.leftIconFollowers}>
 						<img src={leftIconFollowers} alt="" />
 					</div>
-					<div className={styles.leftinnerfollowers}>{newFollowers}</div>
-					<div>followers</div>
+					<div className={styles.leftTextFollowers}>{newFollowers} followers</div>
 				</div>
-				<div className={styles.leftfollowing}>
-					<div className={styles.leftinnerfollowers}>
+				<div className={styles.leftfollowers}>
+					<div className={styles.leftIconFollowers}>
 						<img src={leftIconFollowing} alt="" />
 					</div>
-					<div className={styles.leftinnerfollowers}>{newFollowing}</div>
-					<div>following</div>
+					<div className={styles.leftTextFollowers}>{newFollowing} following</div>
 				</div>
 			</div>
 		</div>

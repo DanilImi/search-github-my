@@ -1,11 +1,7 @@
 .reposit {
-	width: 877px;
-	height: 20%;
+	width: 89.225%;
 	background-color: #fff;
 	border-radius: 6px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	padding: 24px 32px;
 	margin-bottom: 24px;
 }
@@ -18,35 +14,20 @@
 	color: #0064EB;
 	margin-bottom: 16px;
 	cursor: pointer;
+	word-wrap: break-word;
 }
 
-.innerrepositopisanie {
+.desciption {
 	font-size: 16px;
 	line-height: 19px;
 	font-style: normal;
 	color: #000000;
+	word-wrap: break-word;
 }
 
-@media (min-width: 360px) and (max-width: 414px) {
-	.reposit {
-		width: 200px;
-	}
-}
 
-@media (min-width: 414px) and (max-width: 768px) {
-	.reposit {
-		width: 300px;
-	}
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-	.reposit {
-		width: 500px;
-	}
-}
-
-@media (min-width: 992px) and (max-width: 1280px) {
-	.reposit {
-		width: 550px;
+@media (min-width: 991px){
+	.reposit{
+		width: 877px;
 	}
 }

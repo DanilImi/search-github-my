@@ -1,4 +1,3 @@
-import styles from './DataRoutes.module.scss';
 import routes from './routes';
 import {
   BrowserRouter as Router,
@@ -9,7 +8,6 @@ import {
 const DataRoutes = () => {
 
 	return (
-		<div className={styles.newBody}>
 			<Router>
 				<Routes>
 					{routes.map(route => {
@@ -23,7 +21,6 @@ const DataRoutes = () => {
 					})}
 				</Routes>
 			</Router>
-		</div>
 	);
 }
 

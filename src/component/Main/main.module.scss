@@ -1,28 +1,23 @@
+@import '../../scss/variables';
 
-.main{
+.empty{
 	display: flex;
+	height: 100%;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 256px;
+	padding-top: 197px;
 
-	> img{
-		margin-bottom: 44px;
+	>img{
+		margin-bottom: 42px;
+	}
+
+	>div{
+		width: 210px;
+		text-align: center;
+		font-size: 22px;
+		line-height: 28px;
+		color: $color-text;
 	}
 }
-.mainText{
-	width: 208px;
-	color: #808080;
-	font-size: 22px;
-	text-align: center;
-	line-height: 28px;
-}
-.mainIcon{
-	margin-top: 184px;
-}
 
-@media (min-width: 360px) and (max-width: 414px){
-	.main{
-		margin-top: 220px;
-	}
-}

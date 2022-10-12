@@ -9,7 +9,7 @@ import { setIsFetching,
 
 
 export const getRepos = (props, currentPage, perPage) => {
-	if (props == '') {
+	if (props === '') {
 		return
 	}
 	return async (dispatch) => {

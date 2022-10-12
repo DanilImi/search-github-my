@@ -5,13 +5,12 @@ import styles from './user.module.scss'
 
 const User = () => {
 	return (
-		<div className={styles.user}>
-			<Layout />
-			<div className={styles.user_wrapper}>
+		<Layout>
+			<div className={styles.user}>
 				<LeftBlock />
 				<RightBlock />
 			</div>
-		</div>
+		</Layout>
 	)
 }
 
