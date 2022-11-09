@@ -5,7 +5,7 @@ import Reposit from './Reposit/Reposit'
 import styles from './rightblock.module.scss'
 
 
-function RightBlock() {
+const RightBlock = () => {
 	const { currentPage, perPage, totalCount, isFetchingRepos, reposAll } = useSelector((state) => state.repos)
 	const dispatch = useDispatch()
 	const pagesCount = Math.ceil(totalCount / perPage)

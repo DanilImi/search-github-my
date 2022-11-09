@@ -1,6 +1,6 @@
 import styles from './reposit.module.scss'
 
-function Reposit({repo}) {
+const Reposit = ({repo}) => {
 	let newrepositProps = repo
 	let nameReposit = newrepositProps.name
 	let descriptionReposit = newrepositProps.description

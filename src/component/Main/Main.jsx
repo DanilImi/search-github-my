@@ -1,5 +1,5 @@
 import Layout from '../common/Layout'
-import styles from './Main.module.scss'
+import styles from './main.module.scss'
 import emptyIcon from '../../images/user.png'
 import iconMain from './../../images/images.png'
 import { useSelector } from 'react-redux'

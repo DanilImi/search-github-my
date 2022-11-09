@@ -3,7 +3,7 @@ import leftIconFollowers from './../../../images/shared.png'
 import leftIconFollowing from './../../../images/provate.png'
 import { useSelector } from 'react-redux'
 
-function LeftBlock() {
+const LeftBlock = () => {
 	const { followers, following, name, avatar_url, html_url, login } = useSelector((state) => state.repos.items)
 	const newFollowers = followers > 999 ? (followers * 0.001).toFixed(1) + 'k' : followers
 	const newFollowing = following > 999 ? (following * 0.001).toFixed(1) + 'k' : following
